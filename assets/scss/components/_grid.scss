@@ -1,0 +1,65 @@
+/* ==========================================================================
+   GRID SYSTEM
+   ========================================================================== */
+.row{
+	float: left;
+	width: 100%;
+}
+.content{
+	display: block;
+	margin: 0 auto;
+	width: $content_width;
+	max-width: $content_max_width;
+	padding: 0 10px;
+}
+.columns, .column {
+	float: left;	
+	width: 100%;
+	min-height: 1px; 
+	padding-left: $gutter;
+	padding-right: $gutter; 
+}
+.grid{
+	margin-left: -$gutter;
+	margin-right: -$gutter;
+}
+.grid-center{
+	@extend .grid;
+	text-align: center;
+	font-size: 0;
+	.columns{
+		display: inline-block;
+		float: none;
+		padding-left: $gutter;
+		padding-right: $gutter;
+		font-size: $default_font_size;
+	}
+}
+
+//small class is default column class
+@for $i from 1 through 12 {
+    .small-#{$i} { 
+        width: 100% / 12 * $i;
+    }
+}
+
+//make grid based on breakpoints
+@each $class, $points in $breakpoints{
+	@media screen and(min-width: $points) {
+		@for $i from 1 through 12 {
+		    .#{$class}-#{$i} { 
+		        width: 100% / 12 * $i;
+		    }
+		}
+	}
+}
+
+.pull-right{
+	float: right;
+}
+.pull-left{
+	float: left;
+}
+.text-center{
+	text-align: center;
+}
