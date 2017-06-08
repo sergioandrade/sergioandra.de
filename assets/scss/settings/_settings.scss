@@ -1,10 +1,11 @@
 /* ==========================================================================
    GENERAL SETTINGS
    ========================================================================== */
-$default_font_size: 14px;
+$default_font_size: 100%;
 $dev_color: rgba(#085, 0.3);
 $default_link_color: #4078c0;
 $default_color: #282828;
+$bg_color: #f3f3f3;
 
 
 /* Grid system settings
@@ -78,10 +79,8 @@ $error: (
 /* Fonts
    ========================================================================== */
 $fonts: (
-	("Helvetica", arial, sans-serif),
-	("Helvetica", times, sans-serif),
-	("Helvetica", verdana, sans-serif),
-	("Helvetica", tahoma, sans-serif),
+	("League Spartan", arial, sans-serif),
+	("Bitter", "Georgia", times, sans-serif)
 );
 
 

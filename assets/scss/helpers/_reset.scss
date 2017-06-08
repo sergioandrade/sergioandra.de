@@ -60,6 +60,8 @@ body{
 	font-size: $default_font_size;
 	line-height: 1.4;
 	color: $default_color;
+	-webkit-font-smoothing: antialiased;
+	background: $bg_color;
 }
 a{
 	color: $default_link_color;
